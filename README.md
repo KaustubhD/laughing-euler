@@ -6,6 +6,6 @@ Feel free to contribute
 
 Some guidelines before submitting
 
-1. The solution file you write should have a ```#<Problem number``` on the first line.
+1. The solution file you write should have a ```#<Problem-number>``` on the first line.
 2. The file name should be the same as mentioned in Point 1
 3. Indentation of two spaces. Or tab of two spaces
