@@ -3,21 +3,21 @@
   public class HelloWorld{
   public static void main(String []args){
         
-  summ();
+  System.out.println(summ(19564));
          
          
      }
-  private static void summ(){
+  private static int summ(int n){
   int num =0;
         
-  for(int i=3;i < 10000;i++){
+  for(int i=3;i < n;i++){
     if(i % 3 == 0 || i % 5 == 0){
         num+=i;
                 
         }
             
     }
-  System.out.println(num);
+      return num;
         
  }
 } 
