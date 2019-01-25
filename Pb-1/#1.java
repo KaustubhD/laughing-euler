@@ -3,10 +3,10 @@
 class HelloWorld{
   public static void main(String []args){
 
-    System.out.println(summ(19564));  
+    System.out.println(multiplesOf3and5(19564));  
 
   }
-  public static long summ(long n){
+  public static long multiplesOf3and5(long n){
     long num=0;
 
       for(long i=3;i<n;i++){
