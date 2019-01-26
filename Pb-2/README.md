@@ -8,9 +8,9 @@ By considering the terms in the Fibonacci sequence whose values do not exceed **
 
 Eg.
 
-1. ```fiboEvenSum(10)``` should return 188
-2. ```fiboEvenSum(23)``` should return 60696
-3. ```fiboEvenSum(43)``` should return 1485607536
+1. ```fiboEvenSum(10)``` should return 10
+2. ```fiboEvenSum(23)``` should return 10
+3. ```fiboEvenSum(43)``` should return 44
 
 Help
 * The function always returns an *even* value
