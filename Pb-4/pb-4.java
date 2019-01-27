@@ -20,7 +20,9 @@ public class HelloWorld{
              StringBuilder c1 = new StringBuilder(); 
              c1.append(c); 
              c1 = c1.reverse();
-             System.out.println(c);
+             if(c==c1.toString()){
+                 System.out.println(c1);
+             }
              
         
             
@@ -31,3 +33,6 @@ public class HelloWorld{
   }
 }
     
+    
+
+s
