@@ -2,37 +2,42 @@ public class HelloWorld{
 
      public static void main(String []args){
         
-   System.out.println(largestPrimeFactor(2));  
+   System.out.println(largestPalindromeProduct(2));  
   }
 
-  public static double largestPrimeFactor(double n){
+  public static double largestPalindromeProduct(int n){
 
-    double reverse=0;
+  double max=0;
     
     double b= (Math.pow(10,n)-1);
-    for(int i=1;i<=b;i++){
+    for(int i=(int)b;i>=1;i--){
         
         //System.out.println(i);
-        for(int j=1;j<=i;j++){
-            n =i*j;
-            
-            String c=String.valueOf(n);
+        for(int j=i;j>=1;j--){
+             n =i*j;
+			 if(n>max){
+				 
+			 
+            //System.out.println(n);
+             String c=String.valueOf(n);
              StringBuilder c1 = new StringBuilder(); 
-             c1.append(c); 
+            c1.append(c); 
              c1 = c1.reverse();
-             if(c==c1.toString()){
-                 System.out.println(c1);
+             if(c.equals(c1.toString())){
+                 
+                 max=n;
+                 
              }
+			 }
              
         
             
         }
         
     }     
-        return n; 
+        return max; 
   }
 }
     
     
 
-s
