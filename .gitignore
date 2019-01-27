@@ -1,6 +1,6 @@
 *.exe
 *.obj
 *.class
-
+*.swp
 .thumbsdb
 .DS_Store
