@@ -8,12 +8,19 @@ import(
 func getPalindrome(n float64) int64{
   MAX := math.Pow(10, n) - 1
   big, bdiff, prod, diff := 0.0, 0.0, 0.0, 0.0
+  start, skip := 0.0, 0.0
   if int(n) % 2 == 0{
     return int64((math.Pow(10, n / 2) - 1) * math.Pow(10, (3 * n) / 2) + math.Pow(10, n / 2) - 1)
   }else{
     s := ""
     for i := MAX; i >= 1; i--{
-      for j:= i; j >= 1; j --{
+      start = MAX - 9
+      skip = 11
+      if int64(i) % 11 == 0{
+        start = MAX
+        skip = 1
+      }
+      for j:= start; j >= 1; j -= skip{
         prod = i * j
         diff = math.Abs(i - j)
         if prod > big && diff > bdiff{
