@@ -21,7 +21,7 @@ public class HelloWorld{
             //System.out.println(n);
              String c=String.valueOf(n);
              StringBuilder c1 = new StringBuilder(); 
-            c1.append(c); 
+             c1.append(c); 
              c1 = c1.reverse();
              if(c.equals(c1.toString())){
                  
