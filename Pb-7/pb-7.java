@@ -17,7 +17,7 @@ public class HelloWorld{
     }
         return x;
   } 
-  public static boolean abc(long n) {
+   public static boolean abc(long n) {
     if (n < 2) return false;
       else if (n == 2) return true;
         for (int i = 2; i < n/2 + 1; i++)
