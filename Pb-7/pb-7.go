@@ -4,46 +4,36 @@ package main
 import(
   "fmt"
   "time"
-  "math"
 )
 
 func nthPrime(n int) int{
-  const MAX int = 15000
+  const MAX int = 150000
   var arr [MAX]bool
   var count int = 0
   arr[0], arr[1] = true, true
-  for ind, val := range arr{
-    if !val{
-      for i := ind * 2; i <= ((MAX - 1)/ind - 1); i += ind{
-        count += 1
-        arr[i] = true
+  for i := 0; i < MAX; i++{
+    if !arr[i]{
+      fmt.Println("Found false", i, arr[i], count)
+      for j := i * 2; j < ((MAX - 1)/i) - 1; j += i{
+//        fmt.Println("j is",j)
+        arr[j] = true
       }
+      count += 1
     }
+//    fmt.Println(arr)
     if count == n{
-      return ind
+      fmt.Println("count", count, "index", i)
+      return i
     }
   }
-  return n
+//  fmt.Println(count)
+  return 0
 }
-
-func isPrime(n int) bool{
-  if n % 2 == 0{
-   return false
-  }else{
-    for i := 3; i <= int(math.Sqrt(float64(n))); i += 2{
-      if n % i == 0{
-        return false
-      }
-    }
-  }
-  return true
-}
-
 
 func main(){
   start := time.Now()
 
-  fmt.Println(nthPrime(10001))
+  fmt.Println(nthPrime(1000))
 
   elapsed := time.Since(start)
   fmt.Printf("Time taken: %s\n", elapsed)
