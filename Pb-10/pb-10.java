@@ -15,10 +15,10 @@ public class HelloWorld{
       }
       if(count ==0){
   //System.out.println(i);
-        sum+=i;
+        Sum+=i;
       }
     }   
-        return sum;
+        return Sum;
   }
     
 }
