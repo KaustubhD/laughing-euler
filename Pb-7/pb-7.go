@@ -13,31 +13,27 @@ func nthPrime(n int) int{
   arr[0], arr[1] = true, true
   for i := 0; i < MAX; i++{
     if !arr[i]{
-      fmt.Println("Found false", i, arr[i], count)
-      for j := i * 2; j < ((MAX - 1)/i) - 1; j += i{
-//        fmt.Println("j is",j)
+      for j, k := i * 2, 0; k < ((MAX - 1)/i) - 1; k++{
         arr[j] = true
+        j += i
       }
       count += 1
     }
-//    fmt.Println(arr)
     if count == n{
-      fmt.Println("count", count, "index", i)
       return i
     }
   }
-//  fmt.Println(count)
   return 0
 }
 
 func main(){
   start := time.Now()
 
-  fmt.Println(nthPrime(1000))
+  fmt.Println(nthPrime(10001))
 
   elapsed := time.Since(start)
   fmt.Printf("Time taken: %s\n", elapsed)
 
   // 18.74ms
-  // 370.173µs -- this time
+  // 5.5ms --now
 }
