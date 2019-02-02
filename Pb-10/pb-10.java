@@ -1,7 +1,11 @@
 //#pb-10
 public class HelloWorld{
   public static void main(String []args){
-    System.out.println(primeSummation(140759));
+    long startTime = System.nanoTime();
+    System.out.println(primeSummation(140759)); 
+    long endTime = System.nanoTime();
+    long timeElapsed = endTime - startTime;
+    System.out.println("Execution time in microseconds : " + timeElapsed / 1000);
   }
    public static int primeSummation(int n){
     int sum=0;
@@ -15,10 +19,10 @@ public class HelloWorld{
       }
       if(count ==0){
   //System.out.println(i);
-        Sum+=i;
+        sum+=i;
       }
     }   
-        return Sum;
+        return sum;
   }
     
 }
