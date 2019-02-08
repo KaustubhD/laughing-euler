@@ -4,7 +4,7 @@ Starting in the top left corner of a 2×2 grid, and only being able to move to t
 
 ![https://i.imgur.com/1Atixoj.gif](https://i.imgur.com/1Atixoj.gif)
 
-How many such routes are there through a given gridSize?
+How many such routes are there through a given **gridSize**?
 
 Eg.
 
