@@ -1,7 +1,7 @@
-//pb11
+//pb-11
 public class HelloWorld{
   public static void main(String []args){
-    int arr[] [] = {
+    int arr[][] = {
       {8, 2, 22, 97, 38, 15, 0, 40, 0, 75, 4, 5, 7, 78, 52, 12, 50, 77, 91, 8},
       {49, 49, 99, 40, 17, 81, 18, 57, 60, 87, 17, 40, 98, 43, 69, 48, 4, 56, 62, 0},
       {81, 49, 31, 73, 55, 79, 14, 29, 93, 71, 40, 67, 53, 88, 30, 3, 49, 13, 36, 65},
@@ -23,7 +23,7 @@ public class HelloWorld{
       {20, 73, 35, 29, 78, 31, 90, 1, 74, 31, 49, 71, 48, 86, 81, 16, 23, 57, 5, 54},
       {1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48}
     };  
-    int grid2[] [] ={
+    int grid2[][] ={
       {40, 17, 81, 18, 57},
       {74, 4, 36, 16, 29},
       {36, 42, 69, 73, 45},
@@ -45,7 +45,7 @@ public class HelloWorld{
       for (int j = 0; j < grid.length-3; j++) {
         sum = grid[i][j] * grid[i][j + 1] * grid[i][j + 2] * grid[i][j + 3];
         if (sum > max) {
-            max = sum;
+          max = sum;
         }
       }
     }
@@ -55,7 +55,7 @@ public class HelloWorld{
       for (int j = 0; j < grid.length; j++) {
         sum = grid[i][j] * grid[i + 1][j] * grid[i + 2][j] * grid[i + 3][j];
         if (sum > max) {
-            max = sum;
+          max = sum;
         }
       }
     }
@@ -64,7 +64,7 @@ public class HelloWorld{
       for (int j = 0; j < grid.length-3; j++) {
         sum = grid[i][j] * grid[i + 1][j + 1] * grid[i + 2][j + 2] * grid[i + 3][i + 3];
         if (sum > max) {
-            max = sum;
+          max = sum;
         }
       }
     }
@@ -77,15 +77,7 @@ public class HelloWorld{
         }
       }
     }
-    
   
     return max;
   }
-    
-  
-  
-    
-  
-    
-    
 }
