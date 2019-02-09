@@ -71,7 +71,7 @@ public class HelloWorld{
     //check Diagonal Left
     for (int i = 0; i < grid.length-3; i++) {
       for (int j = 3; j < grid.length; j++) {
-        sum = grid[i][j] * grid[i + 1][j - 1] * grid[i + 2][j - 1] * grid[i + 3][j - 1];
+        sum = grid[i][j] * grid[i + 1][j - 1] * grid[i + 2][j - 2] * grid[i + 3][j - 3];
         if (sum > max) {
             max = sum;
         }
