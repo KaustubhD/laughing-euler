@@ -3,7 +3,7 @@ package main
 
 import(
   "fmt"
-  //"math/big"
+  "math/big"
   "time"
 )
 
@@ -108,15 +108,22 @@ var hundredNums = [...]string{"3710728753390210279879799822083759024651013574025
 "20849603980134001723930671666823555245252804609722",
 "53503534226472524250874054075591789781264330331690"}
 
-func largeSum(nums []string) string{
-
-  return "yoyo"
+func largeSum(nums []string) *big.Int{
+  temp, sum := new(big.Int), new(big.Int)
+  for _, i := range nums{
+    temp, ok := temp.SetString(i, 10)
+    if ok{
+      sum.Add(temp, sum)
+    }
+  }
+  //fmt.Println(sum)
+  return sum
 }
 
 func main(){
   start := time.Now()
 
-  fmt.Println(largeSum(hundredNums[:]))
+  fmt.Printf("%s\n", largeSum(hundredNums[:]))
 
   elapsed := time.Since(start)
   fmt.Printf("Time taken: %s\n", elapsed)
