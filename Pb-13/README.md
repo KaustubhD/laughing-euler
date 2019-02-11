@@ -213,5 +213,5 @@ Another number set is
 
 Eg.
 
-1. ```largeSum(hundredNums)``` should return 8348422521
-2. ```largeSum(newNums)``` should return 5537376230
+1. ```largeSum(newNums)``` should return 8348422521
+2. ```largeSum(hundredNums)``` should return 5537376230
