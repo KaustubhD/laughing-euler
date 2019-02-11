@@ -108,16 +108,17 @@ var hundredNums = [...]string{"3710728753390210279879799822083759024651013574025
 "20849603980134001723930671666823555245252804609722",
 "53503534226472524250874054075591789781264330331690"}
 
+var sample2 = [...]string{"37107287533902102798797998220837590246510135740250",
+"46376937677490009712648124896970078050417018260538"}
+
 func largeSum(nums []string) string{
-  fmt.Println(len(nums))
   temp, sum := new(big.Int), new(big.Int)
   for _, i := range nums{
-    temp, _ := temp.SetString(i, 10)
-//    if ok{
+    temp, ok := temp.SetString(i, 10)
+    if ok{
       sum.Add(temp, sum)
-//    }
+    }
   }
-  //fmt.Println(sum)
   return sum.String()
 }
 
@@ -129,3 +130,8 @@ func main(){
   elapsed := time.Since(start)
   fmt.Printf("Time taken: %s\n", elapsed)
 }
+
+/*
+  TODO
+  figure out how to format printing *big.Int using Printf() to save the type conversion from *big.Int to string
+*/
