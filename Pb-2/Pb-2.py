@@ -1,5 +1,6 @@
+
 from datetime import datetime
-start_time = datetime.now()
+
 def evenFibSum(limit) : 
     if (limit < 2) : 
         return 0
@@ -27,8 +28,8 @@ def evenFibSum(limit) :
         sm = sm + num2
       
     return sm 
-  
+start_time = datetime.now() 
 print(evenFibSum(23))
 end_time = datetime.now()
-print('Duration: {}'.format(end_time - start_time))
+print('Duration in microseconds: {}'.format(end_time - start_time))
   
