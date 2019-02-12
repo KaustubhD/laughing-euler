@@ -3,6 +3,7 @@
 By starting at the top of the triangle below and moving to adjacent numbers on the row below, the maximum total from top to bottom is 23.
 
 **testTriangle**
+
 **3**
 
 **7** 4
@@ -16,6 +17,7 @@ That is, 3 + 7 + 4 + 9 = 23.
 Find the maximum total from top to bottom of the triangle below:
 
 **numTriangle**
+
 75
 
 95 64
