@@ -1,4 +1,4 @@
-//#pb-12
+//pb-12
 public class HelloWorld{
   public static void main(String []args){
     long startTime = System.nanoTime();
@@ -7,7 +7,7 @@ public class HelloWorld{
     long timeElapsed = endTime - startTime;
     System.out.println("Execution time in microseconds : " + timeElapsed / 1000);
   }
-  public static int divisibleTriangleNumber(int n ){
+  public static int divisibleTriangleNumber(int n){
     int i=1;
     int a=0;
     while(true){
@@ -16,9 +16,9 @@ public class HelloWorld{
         break;
             
       }    
-        i++;
+      i++;
     }
-        return a;
+    return a;
   }
   public static int factor(int n){
     int count =0;
@@ -27,28 +27,6 @@ public class HelloWorld{
         count++;
       }
     }    
-        return count;
-    
+    return count;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
