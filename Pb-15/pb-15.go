@@ -6,31 +6,33 @@ import(
   "time"
 )
 
-func latticPaths(n int) int64{
-  var x int64 = 0
-  x += callThis(0, 0, n)
-  return x
+func latticPaths(n int) int{
+//  var x int64 = 0
+  arr := make([][]int, n + 1)
+  for i := 0; i <= n; i++{
+    arr[i] = make([]int, n + 1)
+  }
+  fmt.Println(arr)
+  
+
+  for i := 0; i <= n; i++{
+    for j := 0; j <= i; j++{
+      fmt.Println(i, j)
+      if i == 0 || j == 0{
+        arr[i][i] = 1
+      }else{
+        arr[i][j] = arr[i + 1][j] + arr[i][j + 1]
+      }
+    }
+  }
+  return arr[n][n]
 }
 
-func callThis(i, j, n int) int64{
-  // fmt.Println(i, j)
-  var nums int64 = 0
-  if i == n && j == n{
-    return 1
-  }
-  if i < n{
-    nums += callThis(i + 1, j, n)
-  }
-  if j < n{
-    nums += callThis(i, j + 1, n)
-  }
-  return nums
-}
 
 func main(){
   start := time.Now()
 
-  fmt.Println(latticPaths(18))
+  fmt.Println(latticPaths(2))
 
   elapsed := time.Since(start)
   fmt.Printf("Time taken: %s\n", elapsed)
