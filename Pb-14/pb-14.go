@@ -11,33 +11,30 @@ func longestCollatzSequence(n int) int{
   max := [2]int{0, 0}
 
   coll_lens[1] = 1
+  var ith, count int = 0, 0
 
   for i := 1; i <= n; i++{ // checking every number till 'n'
-    var ith, count int = i, 0
+    ith, count = i, 0
     intermediates := make([]int, 0)
-    for ith > n - 1 || coll_lens[ith] >= 1{
-      if ith < n{
-        intermediates = append(intermediates, ith)
-      }
-      fmt.Println(ith, n - 1)
-      // fmt.Println(intermediates)
+    for ith > n - 1 || coll_lens[ith] < 1{ // making a collatz sequence till a known element is found
+      intermediates = append(intermediates, ith) // if not known, add it to the intermediates array
       if ith % 2 == 0{
         ith /= 2
       }else{
         ith = 3 * ith  + 1
       }
-      count += 1
+      count += 1 // length of collatz sequence till a known is found
     }
 
-    for _, intermed := range intermediates{
-      fmt.Println("intermed : ", intermed, " and its len", coll_lens[intermed])
-      intermed_coll_length := coll_lens[count] + len(intermediates)
-      coll_lens[intermed] = intermed_coll_length
-      if intermed_coll_length > max[1]{
-        max[0], max[1] = intermed, intermed_coll_length
+    for ind, intermed := range intermediates{
+      if intermed < n{ // only want elements in range till 'n'
+        intermed_coll_length := coll_lens[ith] + count - ind
+        coll_lens[intermed] = intermed_coll_length
+        if intermed_coll_length > max[1]{
+          max[0], max[1] = intermed, intermed_coll_length
+        }
       }
     }
-    fmt.Println("Length ", i,":", coll_lens[i])
   }
   return max[0]
 }
@@ -45,10 +42,11 @@ func longestCollatzSequence(n int) int{
 func main(){
   start := time.Now()
 
-  fmt.Println(longestCollatzSequence(14))
+  fmt.Println(longestCollatzSequence(1000000))
 
   elapsed := time.Since(start)
   fmt.Printf("Time taken: %s\n", elapsed)
 }
 
 // 7 -> 22 -> 11 -> 34 -> 17 -> 52 -> 26 -> 13 -> 40 -> 20 -> 10 -> 5 -> 16 -> 8 -> 4 -> 2 -> 1
+// 9 -> 28 -> 14 -> 7 ->
