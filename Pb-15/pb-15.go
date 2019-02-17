@@ -7,32 +7,24 @@ import(
 )
 
 func latticPaths(n int) int{
-//  var x int64 = 0
-  arr := make([][]int, n + 1)
-  for i := 0; i <= n; i++{
-    arr[i] = make([]int, n + 1)
-  }
-  fmt.Println(arr)
-  
-
-  for i := 0; i <= n; i++{
-    for j := 0; j <= i; j++{
-      fmt.Println(i, j)
-      if i == 0 || j == 0{
-        arr[i][i] = 1
-      }else{
-        arr[i][j] = arr[i + 1][j] + arr[i][j + 1]
-      }
+  arr := make([]int, n + 1)
+  arr[0] = 1
+  for i := 1; i <= n; i++{
+    arr[i] = 1
+    for j := 1; j < i; j++{
+      arr[j] += arr[j- 1]
     }
+    arr[i] = arr[i - 1] * 2
   }
-  return arr[n][n]
+
+  return arr[n]
 }
 
 
 func main(){
   start := time.Now()
 
-  fmt.Println(latticPaths(2))
+  fmt.Println(latticPaths(20))
 
   elapsed := time.Since(start)
   fmt.Printf("Time taken: %s\n", elapsed)
