@@ -8,4 +8,4 @@ Eg.
 
 1. ```powerDigitSum(15)``` should return 26
 2. ```powerDigitSum(128)``` should return 166
-3. ```powerDigitSum(200)``` should return 1366
+3. ```powerDigitSum(1000)``` should return 1366
