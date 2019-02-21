@@ -1,7 +1,7 @@
 //#pb -13
 import java.math.BigInteger;
 public class HelloWorld{
- static String[] hundredNums  ={
+  static String[] hundredNums  ={
   "37107287533902102798797998220837590246510135740250",
   "46376937677490009712648124896970078050417018260538",
   "74324986199524741059474233309513058123726617309629",
@@ -102,24 +102,25 @@ public class HelloWorld{
   "72107838435069186155435662884062257473692284509516",
   "20849603980134001723930671666823555245252804609722",
   "53503534226472524250874054075591789781264330331690"};
- static String[] newNums={"37107287533902102798797998220837590246510135740250",
-  "46376937677490009712648124896970078050417018260538"};
+  static String[] newNums={"37107287533902102798797998220837590246510135740250",
+   "46376937677490009712648124896970078050417018260538"};
+  
   public static void main(String []args){
-  long startTime = System.nanoTime();
-  System.out.println(largeSum(hundredNums));  
-  long endTime = System.nanoTime();
-  long timeElapsed = endTime - startTime;
-  System.out.println("Execution time in microseconds : " + timeElapsed / 1000);
+    long startTime = System.nanoTime();
+    System.out.println(largeSum(hundredNums));  
+    long endTime = System.nanoTime();
+    long timeElapsed = endTime - startTime;
+    System.out.println("Execution time in microseconds : " + timeElapsed / 1000);
   }
-    public static String largeSum(String[] data){
-      BigInteger sum= new BigInteger("0");
-      for(int i=0;i<data.length;i++){
-        BigInteger result= new BigInteger(data[i]);
-        sum=sum.add(result);
-            
-      }
-        return( sum.toString().substring(0, 10));
+  public static String largeSum(String[] data){
+    BigInteger sum= new BigInteger("0");
+    for(int i=0;i<data.length;i++){
+      BigInteger result= new BigInteger(data[i]);
+      sum=sum.add(result);
 
     }
+    return( sum.toString().substring(0, 10));
+
+  }
 
 }
