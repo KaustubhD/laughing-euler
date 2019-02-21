@@ -1,8 +1,7 @@
 //#pb-13
 import java.math.BigInteger;
 public class HelloWorld{
-  public static void main(String []args){
-    String[] hundredNums  ={
+  String[] hundredNums  ={
   "37107287533902102798797998220837590246510135740250",
   "46376937677490009712648124896970078050417018260538",
   "74324986199524741059474233309513058123726617309629",
@@ -105,6 +104,8 @@ public class HelloWorld{
   "53503534226472524250874054075591789781264330331690"};
   String[] newNums={"37107287533902102798797998220837590246510135740250",
   "46376937677490009712648124896970078050417018260538"};
+  public static void main(String []args){
+    
   long startTime = System.nanoTime();
   System.out.println(largeSum(newNums));  
   long endTime = System.nanoTime();
