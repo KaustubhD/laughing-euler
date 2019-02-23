@@ -17,5 +17,5 @@ How many Sundays fell on the first of the month during the twentieth century (1 
 Eg.
 
 1. ```countingSundays(1943, 1946)``` should return 6
-2. ```countingSundays(1995, 2000)``` should return 9
+2. ```countingSundays(1995, 2000)``` should return 10
 3. ```countingSundays(1901, 2000)``` should return 171
