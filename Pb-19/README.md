@@ -18,4 +18,4 @@ Eg.
 
 1. ```countingSundays(1943, 1946)``` should return 6
 2. ```countingSundays(1995, 2000)``` should return 9
-3. ```countingSundays(1901, 2000) should return 171
+3. ```countingSundays(1901, 2000)``` should return 171
