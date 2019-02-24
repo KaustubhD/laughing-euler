@@ -10,12 +10,9 @@ import(
 var fact = big.NewInt(1)
 
 func sumFactorialDigits(n int) int{
-
-  //fact.Set(n)
+  var sum int = 0
 
   fact.MulRange(1, int64(n))
-
-  var sum int = 0
   for _, i := range(fact.String()){
     sum += int(i - '0')
   }
