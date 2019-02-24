@@ -11,13 +11,12 @@ var fact = big.NewInt(1)
 
 func sumFactorialDigits(n int) int{
 
-  fact.Set(n)
+  //fact.Set(n)
 
-  for i := 2; i < n; i++{
-    fact.Mul(fact, i)
-  }
+  fact.MulRange(1, int64(n))
+
   var sum int = 0
-  for _, i := range(str){
+  for _, i := range(fact.String()){
     sum += int(i - '0')
   }
   return sum
@@ -26,7 +25,7 @@ func sumFactorialDigits(n int) int{
 func main(){
   start := time.Now()
 
-  fmt.Println(sumFactorialDigits(25))
+  fmt.Println(sumFactorialDigits(100))
 
   elapsed := time.Since(start)
   fmt.Printf("Time taken: %s\n", elapsed)
