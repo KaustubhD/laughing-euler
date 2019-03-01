@@ -2,13 +2,13 @@
 
 Surprisingly there are only three numbers that can be written as the sum of fourth powers of their digits:
 
-1634 = 14 + 64 + 34 + 44
+1634 = 1<sup>4</sup> + 6<sup>4</sup> + 3<sup>4</sup> + 4<sup>4</sup>
 
-8208 = 84 + 24 + 04 + 84
+8208 = 8<sup>4</sup> + 2<sup>4</sup> + 0<sup>4</sup> + 8<sup>4</sup>
 
-9474 = 94 + 44 + 74 + 44
+9474 = 9<sup>4</sup> + 4<sup>4</sup> + 7<sup>4</sup> + 4<sup>4</sup>
 
-As 1 = 14 is not a sum it is not included.
+As 1 = 1<sup>4</sup> is not a sum it is not included.
 
 The sum of these numbers is 1634 + 8208 + 9474 = 19316.
 
