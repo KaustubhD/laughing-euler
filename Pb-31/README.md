@@ -1,4 +1,4 @@
-# Problem 30
+# Problem 31
 
 In England the currency is made up of pound, £, and pence, p, and there are eight coins in general circulation:
 
