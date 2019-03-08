@@ -1,10 +1,6 @@
-//#pb-7
-package main
-
 import (
 	"fmt"
 	"math"
-	"time"
 )
 
 func getSum(p, a float64) int {
@@ -51,16 +47,4 @@ func primeSummation(n int) int {
 	//    }
 	// }
 	return sum
-}
-
-func main() {
-	start := time.Now()
-
-	fmt.Println(primeSummation(17))
-
-	elapsed := time.Since(start)
-	fmt.Printf("Time taken: %s\n", elapsed)
-
-	// 18.74ms
-	// 5.5ms --now
 }
