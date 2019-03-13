@@ -9,4 +9,10 @@ It can be seen that the 12<sup>th</sup> digit of the fractional part is 1.
 
 If d<sub>n</sub> represents the n<sup>th</sup> digit of the fractional part, find the value of the following expression.
 
-d1 × d10 × d100 × d1000 × d10000 × d100000 × d1000000
+d<sub>1</sub> × d<sub>10</sub> × d<sub>100</sub> × d<sub>1000</sub> × d<sub>10000</sub> × d<sub>100000</sub> × d<sub>1000000</sub>
+
+Eg.
+
+1. ```champernownesConstant(100)``` should return 5
+2. ```champernownesConstant(1000)``` should return 15
+3. ```champernownesConstant(1000000)``` should return 210
