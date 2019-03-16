@@ -20,3 +20,6 @@ d8d9d10=289 is divisible by 17
 
 Find the numbers of all 0 to 9 pandigital numbers with this property
 
+Eg.
+
+1. ```substringDivisibility()``` should return [ 1430952867, 1460357289, 1406357289, 4130952867, 4160357289, 4106357289 ]
