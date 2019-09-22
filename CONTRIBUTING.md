@@ -25,6 +25,10 @@
 
 * Feel free to write your own solutions if you wish
 
+* **NOTE** Every PR must solve a single problem.
+
+Eg. A single problem addition or A single solution submission or a single folder name change
+
 
 ## Resources
 * List of all [Project Euler problems](https://learn.freecodecamp.org/coding-interview-prep/project-euler)
